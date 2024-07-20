@@ -1,0 +1,50 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.about-what {
+    padding: 60px 0;
+
+    .what-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .what-column {
+            padding: 20px;
+            text-align: justify;
+
+            &.illustration {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            &.text {
+                padding-top: 2%;
+                h2.what-title {
+                    font-size: 32px;
+                    margin: 0;
+                    color: $main-clr;
+                    text-align: right;
+                }
+
+                p.what-description {
+                    font-size: 18px;
+                    margin: 20px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

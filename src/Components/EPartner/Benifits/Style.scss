@@ -1,0 +1,99 @@
+// *** Selectors & PIV ***
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$border-clr: #6ebbdf48;
+
+.benefitsSection {
+  padding: 60px 0;
+  text-align: center;
+  background-color: $main-light-clr;
+  transition: background-color 0.3s ease;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: $main-clr;
+    transition: color 0.3s ease;
+  }
+
+  .benefitCard {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    margin-bottom: 30px;
+
+    .card {
+      border: none;
+      width: 100%;
+      max-width: 300px; // Fixed card width
+      background: $whiteClr;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+
+      .icon {
+        font-size: 36px;
+        color: $main-clr;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+      }
+
+      .card-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: $main-clr;
+        transition: color 0.3s ease;
+      }
+
+      .card-text {
+        font-size: 16px;
+        text-align: justify;
+        color: $sec-clr;
+        transition: color 0.3s ease;
+      }
+
+      &:hover {
+        background: $main-clr;
+
+        .icon {
+          color: $whiteClr;
+        }
+        .card-title {
+          color: $whiteClr;
+        }
+        .card-text {
+          color: $whiteClr;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .benefitsSection {
+    h2 {
+      font-size: 22px;
+    }
+
+    .benefitCard {
+      margin-bottom: 20px;
+      .card {
+        max-width: 100%;
+        width: 90%;
+        .icon {
+          font-size: 30px;
+        }
+        .card-title {
+          font-size: 18px;
+        }
+        .card-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

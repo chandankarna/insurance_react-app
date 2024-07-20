@@ -1,0 +1,43 @@
+// Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// Styles
+.sales-header {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+
+  .sales-header-content {
+    text-align: center;
+    margin: 0 auto;
+
+    .sales-header-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0;
+      color: $main-clr; // Apply the main color
+    }
+
+    .sales-header-description {
+      font-size: 18px;
+      margin: 0;
+      color: $sec-clr; // Apply the secondary color
+    }
+  }
+
+  .formTxts {
+    padding-top: 14%;
+  }
+
+  .imgContainer {
+    padding-top: 14%;
+    width: 100%;
+  }
+}

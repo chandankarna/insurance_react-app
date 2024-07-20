@@ -1,0 +1,102 @@
+// *** Selectors & PIV ***
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$whiteLight: #eee;
+$main-light-clr: #269ed609;
+$border-clr: #6ebbdf48;
+
+.productsSection {
+    padding: 60px 0;
+    text-align: center;
+    background-color: $main-light-clr;
+    transition: background-color 0.3s ease;
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: $main-clr;
+        transition: color 0.3s ease;
+    }
+
+    .productCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background: $whiteClr;
+        margin-bottom: 20px;
+        
+        .product {
+            padding: 20px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            
+            .productIcon {
+                font-size: 48px;
+                color: $main-clr;
+            }
+
+            .product-title {
+                font-size: 20px;
+                margin: 10px 0;
+                color: $main-clr;
+                transition: color 0.3s ease;
+            }
+
+            .product-description {
+                font-size: 16px;
+                text-align: center;
+                color: $sec-clr;
+                transition: color 0.3s ease;
+            }
+
+            &:hover {
+                background: $main-clr;
+
+                .productIcon {
+                    color: $whiteClr;
+                }
+                .product-title {
+                    color: $whiteClr;
+                }
+                .product-description {
+                    color: $whiteLight;
+                }
+            }
+        }
+    }
+
+    .productNote {
+        font-size: 16px;
+        color: $sec-clr;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productsSection {
+        .section-title {
+            font-size: 22px;
+        }
+
+        .productCard {
+            padding: 15px;
+            
+            .product {
+                padding: 15px;
+            }
+            
+            .productIcon {
+                font-size: 40px;
+            }
+            .product-title {
+                font-size: 18px;
+            }
+            .product-description {
+                font-size: 14px;
+            }
+        }
+    }
+}

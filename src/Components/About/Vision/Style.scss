@@ -1,0 +1,78 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.about-vision {
+    padding: 60px 0;
+
+    .vision-header {
+        text-align: center;
+        margin-bottom: 40px;
+        
+        h2.vision-section-title {
+            font-size: 28px;
+            color: $main-clr;
+            margin: 0;
+        }
+        p.vision-subtitle {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    .vision-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .vision-box {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background: $main-clr;
+            color: $whiteClr;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+
+            i {
+                font-size: 36px;
+                margin: 0 0 15px;
+            }
+
+            h3.vision-title {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            p.vision-description {
+                font-size: 16px;
+                margin: 10px 0;
+                text-align: justify;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba($main-clr, 0.5);
+            }
+
+            @media (min-width: 768px) {
+                width: calc(50% - 20px);
+            }
+
+            @media (min-width: 992px) {
+                width: calc(20% - 20px);
+            }
+
+            @media (min-width: 1200px) {
+                width: calc(16.66% - 20px);
+            }
+        }
+    }
+}

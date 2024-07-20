@@ -1,0 +1,79 @@
+$primary-color: #1a91c9;
+$secondary-color: #808080;
+$white-color: #fff;
+
+// Styling for the entire component
+.claimSectionContainer {
+    padding: 3% 0;
+
+    .container {
+        margin-top: 40px;
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 28px;
+            color: $primary-color;
+        }
+
+        // Styling for individual steps
+        .card {
+            // border: 1px solid #eee;
+            border: none;
+            border-radius: 10px;
+            // box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+
+            &:hover {
+                box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .card-body {
+                i {
+                    color: #808080;
+                    font-size: 3rem;
+                    margin-bottom: 15px;
+                }
+
+                h4 {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 18px;
+                    color: $secondary-color;
+                }
+
+                &:hover i,
+                h4 {
+                    transition: 0.3s ease-in-out;
+                    color: $primary-color;
+                }
+            }
+        }
+
+        // Responsiveness
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 24px;
+            }
+
+            .card {
+                .card-body {
+                    i {
+                        font-size: 2.5rem;
+                    }
+
+                    h4 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

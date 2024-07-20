@@ -1,0 +1,41 @@
+.whatSectionCOntainer {
+    background: #f8f8f8;
+    padding: 60px 0;
+}
+
+.what-is-pos {
+    padding: 30px;
+    border-radius: 5px;
+    
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 20px;
+    }
+    
+    .row {
+        align-items: center;
+        
+        .textContainer {
+            p {
+                font-size: 16px;
+                color: #555;
+                margin: 0 0 20px;
+                
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+        
+        .imgContainer {
+            text-align: center;
+            img {
+                // box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

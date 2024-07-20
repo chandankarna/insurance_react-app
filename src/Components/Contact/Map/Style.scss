@@ -1,0 +1,35 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.contact-map {
+    padding: 80px 0;
+    text-align: center;
+
+    .contact-map-content {
+        margin: 0 auto;
+
+        .contact-map-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .contact-map-iframe {
+            max-width: 100%;
+            margin-top: 20px;
+
+            iframe {
+                border: none;
+                box-shadow: 0 0 20px rgba($main-clr, 0.3);
+                border-radius: 8px;
+            }
+        }
+    }
+}

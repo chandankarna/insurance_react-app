@@ -1,0 +1,136 @@
+// Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$whiteClr: #fff;
+
+.claimHeaderContainer {
+    margin-top: 150px;
+    min-height: 65vh;
+
+    .claimHeader {
+        padding-top: 1%;
+
+        h1 , p {
+            color: $main-clr;
+            text-align: center;
+        }
+    }
+
+    .formContainer {
+        padding: 20px;
+
+        Form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: $whiteClr;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+
+            Form.Group {
+                margin-bottom: 20px;
+
+                Form.Label {
+                    color: $main-clr;
+                    font-weight: bold;
+                }
+
+                Form.Control {
+                    border: 2px solid $main-clr;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    border: none !important;
+                    outline: none !important;
+
+                    &:active,
+                    &:focus {
+                        border: none !important;
+                        outline: none !important;
+                    }
+
+                    &::placeholder {
+                        color: $sec-clr;
+                    }
+                }
+            }
+
+            /* Remove the up and down arrows in number inputs */
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            Form.Check {
+                display: flex;
+                align-items: center;
+
+                label {
+                    color: $sec-clr;
+                }
+            }
+
+            Button {
+                width: 100%;
+                background: $main-clr;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 10px 20px;
+                transition:
+                    background 0.3s ease,
+                    transform 0.3s ease;
+
+                &:hover {
+                    background: darken($main-clr, 10%);
+                    transform: scale(1.01);
+                }
+            }
+        }
+    }
+
+    .imgContainer {
+        text-align: center;
+
+        .claimImg {
+            max-width: 100%;
+            height: auto;
+            animation: float 2s ease-in-out infinite;
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(0, 10px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .formContainer {
+            background: rgba($whiteClr, 0.95);
+
+            Form {
+                Form.Group {
+                    margin-bottom: 15px;
+
+                    Form.Label {
+                        font-size: 14px;
+                    }
+
+                    Form.Control {
+                        font-size: 14px;
+                    }
+                }
+
+                Button {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

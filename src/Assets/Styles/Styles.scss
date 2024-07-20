@@ -1,0 +1,65 @@
+/* 
+***
+All Scss codes are using lacspace and Algoquant variables
+all pages selectors:--
+`h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.headings,
+~mixins,
+~variables,
+~Lacspace Variable
+~Algoquant Variables
+and...
+~fonts`
+Main Font as Poppins declared in Index
+© Policy India 2023, All rights reserved.
+*** 
+*/
+
+// *** Selectors & GSV ***
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// ?? Font Size Variables
+$title-font-size: 3rem;
+$card-title: 1.5rem;
+$paragraph-font-size: 1.2rem !default;
+
+// ?? Main Mixins
+@mixin flex {
+    display: flex !important;
+    margin: auto;
+    justify-content: center !important;
+    place-items: center !important;
+}
+
+@mixin h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+// *** Styling Starts
+// ?? Side Scroller
+// *** Scrolls ***
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: $main-clr;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}

@@ -1,0 +1,91 @@
+.CallSection {
+    background-color: #f5f5f5; /* Background color */
+    padding: 2rem;
+    border-radius: 10px;
+  
+    .call-container {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease; /* Fade in animation */
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #333; /* Text color */
+        animation: slideInDown 1s ease; /* Slide in from top animation */
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #666; /* Text color */
+        margin-bottom: 2rem;
+        animation: fadeIn 1s ease; /* Fade in animation */
+      }
+  
+      .contact-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        .btn {
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          background-color: #1a91c9; /* Button background color */
+          color: #fff; /* Button text color */
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+  
+          &:hover {
+            background-color: #15739d; /* Button background color on hover */
+          }
+        }
+  
+        .whatsapp {
+          font-size: 1.2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          span {
+            color: #999; /* Text color */
+          }
+  
+          a {
+            color: #1a91c9; /* WhatsApp link color */
+            font-weight: bold;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

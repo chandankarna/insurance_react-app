@@ -1,0 +1,47 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.whySectionContainer {
+    margin: 12% 0;
+
+    .whySectionOuterColumn {
+        padding-left: 30px;
+    }
+
+    .whySectionOuterColumnRight {
+        padding: 30px;
+        margin-top: -70px;
+
+        .headingText {
+            font-weight: 200;
+            padding-bottom: 20px;
+
+            span {
+                font-weight: 600;
+                color: $main-clr;
+            }
+        }
+
+        .reasonBoxes {
+            .box {
+                border: 1px solid #eee;
+                padding: 10px;
+                margin-top: 5px;
+                border-radius: 10px;
+                color: #808080;
+                font-size: 14px;
+
+                h6 {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.contact-header {
+    background: $main-clr;
+    color: $whiteClr;
+    padding: 100px 0;
+    text-align: center;
+
+    .contact-header-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .contact-header-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .contact-header-subtitle {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    }
+}

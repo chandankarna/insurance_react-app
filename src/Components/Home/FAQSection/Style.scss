@@ -1,0 +1,106 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Faqs Styles
+.FaqSection {
+    margin: 3% 0;
+
+    .faqStyle {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        text-align: center;
+
+        h1 {
+            font-weight: 300;
+            padding-top: 3%;
+
+            span {
+                font-weight: 600;
+                color: $main-clr;
+            }
+        }
+
+        p {
+            color: $sec-clr;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.faq-container {
+    background-color: $whiteClr;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: $main-clr;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $sec-clr;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.accordion .accordion-button {
+    color: $main-clr;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 2px;
+}
+.accordion .accordion-button.collapsed::after {
+    transform: rotate(-90deg) translate(0.1em, -7px);
+    color: #fff !important;
+}
+
+/* Accordion Button Outline, border, and shadow */
+.accordion-item .accordion-button {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+
+    &:hover {
+        background: $main-clr;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.active {
+        /* Add styles for the active state */
+        box-shadow: none !important;
+        color: $main-clr;
+        background: $main-clr;
+    }
+}
+
+.accordion-body {
+    background-color: $whiteClr;
+    color: $sec-clr;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

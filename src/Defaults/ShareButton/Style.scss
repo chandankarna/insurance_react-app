@@ -1,0 +1,71 @@
+$main-clr: #1a91c9;
+$main-dark: #05587e;
+
+.share-button {
+    position: fixed;
+    bottom: 40%;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: top 0.5s ease-in-out;
+
+    .share-icon {
+        background-color: $main-clr;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+            background-color 0.3s,
+            transform 0.5s;
+
+        i {
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            background-color: $main-dark;
+
+            i {
+                transform: scale(1);
+            }
+        }
+
+        &:hover .fa-share {
+            transform: rotate(90deg);
+        }
+    }
+
+    .share-icons {
+        display: flex;
+        flex-direction: column;
+        transform: scaleY(0);
+        transform-origin: top; /* Changed to open from the top */
+        transition: transform 0.5s ease-in-out;
+
+        &.active {
+            transform: scaleY(1);
+        }
+
+        a {
+            text-decoration: none;
+            color: $main-clr;
+            font-size: 24px;
+
+            &:hover {
+                color: $main-dark;
+            }
+
+            i {
+                font-size: 28px;
+            }
+        }
+    }
+}

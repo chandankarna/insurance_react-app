@@ -1,0 +1,76 @@
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// *** Styles
+.about-header {
+    margin-top: 90px;
+    background: linear-gradient(to top, $main-clr, $main-light-clr);
+    padding: 50px 0;
+    color: $whiteClr;
+    min-height: 100vh;
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        animation: fadeIn 1.5s ease;
+
+        .header-title {
+            font-size: 36px;
+            margin: 0;
+            color: #000;
+            text-align: center;
+        }
+        
+        .header-subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .header-illustration {
+            margin: 20px 0;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .header-paragraph {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            .column {
+                flex: 1;
+                margin: 20px;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

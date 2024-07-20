@@ -1,0 +1,254 @@
+// *** Selectors & GSV ***
+// ?? Color Variables
+$main-clr: #1a91c9;
+$main-dark: #03557a;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+/* Navbar container styles */
+.navbar {
+    transition: all .3s ease-in-out;
+    height: 90px;
+    background-color: #fff !important;
+    font-family: sans-serif;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    
+    a.navbar-brand {
+        padding: 15px 0px;
+        font-size: x-large;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $main-clr;
+        }
+    }
+}
+
+/* Dropdown styles */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown when hovering over the parent */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    z-index: +999;
+    animation: fadeInDown 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Style the dropdown items */
+.dropdown-menu {
+    transition: all 0.5s ease-in-out;
+    display: none; /* Initially hide the dropdown menu */
+    border: none !important;
+    outline: none !important;
+    -webkit-box-shadow: 2px 12px 12px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 2px 12px 12px 0px rgba(0, 0, 0, 0.39);
+    z-index: 1;
+    visibility: hidden;
+    transform: translateY(0.3em);
+    overflow: hidden;
+
+    /* Add animation and unique style */
+    &.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+/* Style the dropdown links */
+.dropdown-item {
+    color: #333; /* Text color for dropdown items */
+    background: none !important;
+    padding: 5px 15px;
+    margin: 10px 0;
+
+    &:hover {
+        color: $main-clr !important;
+    }
+}
+
+/* Custom animation keyframes */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply rotation transform to the icon when hovering over the dropdown parent */
+.nav-item.dropdown:hover .toggle-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.nav-item.dropdown .toggle-icon {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.nav-item.dropdown:hover .navName {
+    color: $main-clr;
+}
+
+/* Style active link */
+.nav-link.active {
+    font-weight: bold; /* Example: Make the active link bold */
+    /* Add other styles for the active link as needed */
+}
+
+.topNav {
+    a {
+        margin-left: 20px;
+    }
+    #navbarSupportedContent {
+        ul.leftNav {
+            margin-left: 1%;
+        }
+
+        ul.rightNav {
+            display: flex;
+            list-style-type: none;
+            margin-right: 30px;
+            padding-top: 10px;
+
+            li {
+                a {
+                    position: relative;
+                    display: inline-block;
+                    padding: 5px 15px;
+                    color: #fff;
+                    border: 1px solid #eee;
+                    transition: all 0.3s ease-in-out;
+                    background-position: 100% 0;
+                    background-size: 200% 100%;
+                    background-image: linear-gradient(to right, transparent 50%, $main-clr 50%);
+
+                    &:hover {
+                        border: 1px solid $main-clr;
+                        background-position: 0 0;
+                        color: $main-clr;
+                    }
+                }
+            }
+        }
+
+        .navLogin {
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background: $main-clr;
+            padding: 10px 45px;
+            color: #fff;
+            margin: 2px 30px;
+            -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background: $main-dark;
+            }
+        }
+    }
+}
+
+// *** Mobile Navs
+// Global styles
+.mobileNav-container {
+    .mobile-navBtn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999999999;
+        cursor: pointer;
+        background-color: $main-clr;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        outline: none;
+    
+        &:hover {
+            background-color: #555;
+        }
+    }
+    
+    // Overlay styles
+    .overlay {
+        display: none; // Hide by default on larger screens
+        position: fixed;
+        z-index: 99999999;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        transition: 0.5s;
+    
+        &.open {
+            display: block; // Show when open
+        }
+    
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+    
+            a {
+                padding: 10px 0;
+                text-decoration: none;
+                font-size: 28px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+    
+                &:hover,
+                &:focus {
+                    color: #f1f1f1;
+                }
+            }
+    
+            .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 40px;
+    
+                @media screen and (max-height: 450px) {
+                    font-size: 30px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+        }
+    }
+    
+    // Media query for mobile and tablet screens
+    @media screen and (max-width: 768px) {
+        .mobile-navBtn {
+            display: block; // Show the button on mobile and tablet screens
+        }
+    
+        .overlay {
+            display: none; // Hide the overlay on mobile and tablet screens initially
+        }
+    
+        .overlay.open {
+            display: block; // Show the overlay when open on mobile and tablet screens
+        }
+    }
+}

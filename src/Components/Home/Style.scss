@@ -1,0 +1,135 @@
+// *** Selectors & PIV ***
+// ?? Color Variables
+$main-clr: #1a91c9;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// ?? Font Size Variables
+$title-font-size: 3rem;
+$card-title: 1.5rem;
+$paragraph-font-size: 1.2rem !default;
+
+// ?? Main Mixins
+@mixin flex {
+    display: flex !important;
+    margin: auto;
+    justify-content: center !important;
+    place-items: center !important;
+}
+
+@mixin h1 {
+    text-align: center;
+    font-family: monospace;
+}
+
+// ?? Stylings
+.home-wrapper {
+    margin: 120px 0;
+    padding: 20px;
+
+    .headerTextContainer {
+        padding: 20px;
+
+        h1 {
+            font-weight: 200;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Header
+.headerRowContainer {
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); // Adjust grid layout for responsiveness
+
+    .insuCard {
+        a {
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                color: #1ac9c9;
+            }
+        }
+
+        .imgContainer {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+
+            img {
+                width: 100%; // Adjust image size to fit the container
+
+                @media screen and (min-width: 768px) {
+                    max-width: 80%; // Decrease image size for larger screens
+                }
+            }
+
+            &:hover {
+                -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+
+            &:hover img {
+                transition: all 0.3s ease-in-out;
+                transform: scale(1.1);
+            }
+
+            &:hover p {
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+// *** Reasons Styles
+.reasons-container {
+    padding: 4% 0;
+    text-align: center;
+
+    .reason-card {
+        border: none;
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 2rem;
+
+        i {
+            font-size: 4rem;
+            color: $main-clr;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        .card-text {
+            color: #666;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .reason-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

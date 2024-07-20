@@ -1,0 +1,114 @@
+// *** Selectors & PIV ***
+// ?? Color Variables
+$main-clr: #1a91c9;
+$main-dark: #03557a;
+$sec-clr: #808080;
+$light-dark-clr: #434449;
+$whiteClr: #fff;
+$main-light-clr: #269ed609;
+$main-light-clr: #269ed657;
+$border-clr: #6ebbdf48;
+
+// ?? Font Size Variables
+$title-font-size: 3rem;
+$card-title: 1.5rem;
+$paragraph-font-size: 1.2rem !default;
+
+// ?? Main Mixins
+@mixin flex {
+  display: flex !important;
+  margin: auto;
+  justify-content: center !important;
+  place-items: center !important;
+}
+
+// *** Styles
+.lifeInsurancePage {
+  margin-top: 90px;
+}
+
+.insurance-page {
+  min-height: 100vh;
+}
+
+.life-insurancePage {
+  .life-insurance-page {
+    padding: 5%;
+    border-radius: 10px;
+
+    .form-Container {
+      padding: 40px 0;
+      width: 100%;
+      -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: $main-clr;
+      font-size: $title-font-size;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      label {
+        font-size: 18px;
+        font-weight: bold;
+        color: $main-clr;
+      }
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: $whiteClr;
+      border-radius: 10px;
+
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          font-size: 18px;
+          font-weight: bold;
+          color: $main-dark;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px;
+          font-size: 16px;
+          border: 1px solid $border-clr;
+          border-radius: 5px;
+          outline: none;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: $main-clr;
+          }
+        }
+      }
+
+      button {
+        margin-top: 30px;
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        background-color: $main-clr;
+        color: $whiteClr;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $main-dark;
+        }
+      }
+    }
+  }
+}
